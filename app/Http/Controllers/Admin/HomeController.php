@@ -72,7 +72,7 @@ class HomeController extends Controller
     {
         return view('admin.edit', ['ricepe' => $Admin,]);
     }
-    public function update(Request $request, Ricepe $Admin,)
+    public function update(Request $request, Ricepe $Admin)
     {
 
         $request->validate([

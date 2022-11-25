@@ -95,6 +95,7 @@ class FavoriteController extends Controller
      */
     public function destroy(Favorite $favorite)
     {
+        //    $favoorite = Facorite::find($favorite->id);
         $favorite->delete();
         return ['alert' => 'Favorite deleted successfully']; 
     }

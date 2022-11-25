@@ -5,7 +5,7 @@
             {{ getFilteredRicepes.length }}
         </div>
         <div class="alert alert-secondary" v-if="this.q && getFilteredRicepes.length === 0">
-            
+            Non sono state trovate ricette.
         </div>
         <div class="loader" v-if="this.loading"></div>
         <div v-for="ricepe in getFilteredRicepes" v-bind:key="ricepe.id">
@@ -43,7 +43,7 @@
             }
         },
         methods: {
-            fetchRicepes() {
+            Ricepes() {
                 axios.get('/api/ricepes')
                 .then(response => {
                     this.ricepes = response.data;
@@ -62,7 +62,7 @@
             }
         },
         mounted() {
-            this.fetchRicepes();
+            this.Ricepes();
         }
     }
 </script>
